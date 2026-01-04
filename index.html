@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX API</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hover.css@2.3.1/css/hover.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>SpaceX Launch Explorer</h1>
+        <p style="margin: 10px; opacity: 0.7;">View launch missions and see information about the rocket and launchpad used. Filter by outcome and location, or search by mission or rocket name.</p>
+
+        <div class="filters">
+            <!-- Mission outcome filter -->
+            <label>
+                Mission Outcome:
+                <select id="outcomeFilter">
+                    <option value="all">All</option>
+                    <option value="success">Successful</option>
+                    <option value="failed">Failed</option>
+                    <option value="upcoming">Upcoming</option>
+                </select>
+            </label>
+            <!-- launchpad region filter-->
+            <div>
+                <label for="launchLocation">Launchpad location:
+                    <select id="launchLocation">
+                        <option value="all">All locations</option>
+                        <option value="California">Vandenberg Space Force Base (California)</option>
+                        <option value="Florida">Cape Canaveral (Florida)</option>
+                        <option value="Texas">Boca Chica Village (Texas)</option>
+                        <option value="Marshall Islands">Omelek Island (Marshall Islands)</option>
+                    </select>
+                </label>
+            </div>
+            <!-- Search box filter -->
+            <label>
+                Search:
+                <input id="searchInput" type="text" placeholder="Mission or rocket name" />
+            </label>
+        </div>
+        <!-- Output -->
+        <p id="statusText">Data not loaded yet.</p>
+        <div id="launchList"></div>
+
+    </header>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
