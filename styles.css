@@ -4,6 +4,7 @@ body{
   background: url('images/stars3.jpeg');
   background-attachment: fixed;
   font-size: 14px;
+  background-color: black;
 }
 h1, h2 {
   font-family: "Segoe UI", Roboto, sans-serif;
